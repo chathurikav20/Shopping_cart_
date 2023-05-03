@@ -1,0 +1,15 @@
+# shopping_cart.py
+#implementing the code to pass these tests.
+
+class ShoppingCart:
+    def __init__(self):
+        self.items = []
+
+    def add_item(self, item):
+        self.items.append(item)
+
+    def view_cart(self):
+        return ", ".join([item for item in self.items])
+
+    def calculate_total_price(self):
+        return sum([item["price"] for item in self.items])
